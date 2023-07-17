@@ -1,6 +1,6 @@
 {
     "name": "theamostafa/laravel-wallet",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "This is my package laravel-wallet",
     "keywords": [
         "theamostafa",
@@ -18,9 +18,9 @@
     ],
     "require": {
         "php": "^8.1",
-        "illuminate/contracts": "^8.*",
-        "lorisleiva/laravel-actions": "*",
-        "spatie/laravel-package-tools": "^1.0"
+        "illuminate/contracts": "^8|^9|^10",
+        "lorisleiva/laravel-actions": "^1|^2",
+        "spatie/laravel-package-tools": "^1"
     },
     "require-dev": {
         "orchestra/testbench": "^8.0"
