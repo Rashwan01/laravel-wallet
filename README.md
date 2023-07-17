@@ -42,12 +42,18 @@ $user->balance; // 10
 $user->withdraw(1);
 $user->balance; // 9
 ```
+You can also add metadata for transaction
 
-Fetch wallet data.
 ```php
 $user = User::first();
 
-$user->wallet;
+$transaction = $user->withdraw(
+        amount: 1.33,
+        meta: [
+            'description' => "Refund from order #14"
+        ]
+    );
+    $transaction->description // Refund from order #14
  
 ```
 Fetch all model transactions.
@@ -64,6 +70,10 @@ composer test
 ## Credits
 
 - [Ahmed Mostafa](https://github.com/rashwan01)
+
+## Features coming with version 2
+-   Model may be having multiple wallet
+-   Wallet may be acted as payment gateway and can purchase products 
 
 ## License
 
