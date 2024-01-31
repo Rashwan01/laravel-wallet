@@ -29,6 +29,7 @@ use Str;
 class Transaction extends Model {
     use HasFactory;
 
+    protected string $table = 'wallet_transactions';
     protected $guarded = ['id'];
     public const TYPE_DEPOSIT = 'deposit';
     public const TYPE_WITHDRAW = 'withdraw';
@@ -58,7 +59,7 @@ class Transaction extends Model {
     }
 
     public function getDescriptionAttribute(): string {
-        return $this->meta['description']??'';
+        return $this->meta['description'] ?? '';
     }
 
     public function getAmountFloatAttribute(): string {
