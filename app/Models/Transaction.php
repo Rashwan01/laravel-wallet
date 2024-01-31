@@ -29,7 +29,7 @@ use Str;
 class Transaction extends Model {
     use HasFactory;
 
-    protected string $table = 'wallet_transactions';
+    protected  $table = 'wallet_transactions';
     protected $guarded = ['id'];
     public const TYPE_DEPOSIT = 'deposit';
     public const TYPE_WITHDRAW = 'withdraw';
