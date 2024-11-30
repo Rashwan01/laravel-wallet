@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Theamostafa\\Wallet\\": "app/",
+            "Theamostafa\\Wallet\\": "app/"
         }
     },
     "autoload-dev": {
