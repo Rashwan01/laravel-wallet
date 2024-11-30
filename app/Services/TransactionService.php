@@ -40,7 +40,7 @@ class TransactionService {
         $wallet->update([
             'balance' => $wallet->transactions()->select(
                 DB::raw(
-                    "CASE WHEN type = 'deposit' THEN amount ELSE CAST(-amount AS float) END as balance"
+                    `CASE WHEN type = 'deposit' THEN amount ELSE CAST(-amount AS float) END as balance`
                 ))->get()->sum('balance')
         ]);
         return $transaction;
